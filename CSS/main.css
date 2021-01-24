@@ -127,6 +127,12 @@ iframe {
 	display:inline-block;
 	margin-left: 12px; }
 
+.title-llc {
+	font-size: 32px; }
+	@media (min-width: 601px) {
+		.title-llc {
+		font-size: 64px; } }
+
 .spin {
 	animation-name: spin;
 	animation-duration: 3000ms;
@@ -219,7 +225,6 @@ iframe {
 
 /* Make page full width so reset Foundation.js restriction on max-width */
 .row {
-	/*width: 100%;*/
 	max-width: 100%; }
 
 ul, li {
@@ -247,7 +252,6 @@ a {
 
 .table-cell {
 	display: table-cell;
-	/*height: inherit;*/
 	vertical-align: middle; }
 
 .align-center {
@@ -262,9 +266,6 @@ a {
 .align-justify {
 	text-align: justify; }
 
-/*.mask {
-	position: relative;
-}*/
 /** 0. Color Color */
 .mask:before {
 	position: absolute;
@@ -1405,13 +1406,19 @@ strong, .bold {
 	z-index: 0;
 	overflow: hidden; }
 	.page-cover .cover-bg {
-		/* Page Cover, Background Image, Color */
-		background: url(../Images/bg07.jpg);
+		/* Page Cover, Background Image, Color 
+				mask-image: linear-gradient(to bottom, transparent 1%, rgb(0, 0, 0) 30%);
+		mask-repeat: space;*/
+		background-image: 
+			linear-gradient(to bottom, #0077AA 0.1%, transparent 50%),
+			url(../Images/bg01.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		opacity: 0.2;
+		mask-image: linear-gradient(to bottom, transparent 0.1%, #000000 20%);
+		z-index: -1;
+		opacity: 0.25;
 		z-index: -1; }
 	.page-cover .cover-bg.bg-color {
 		/* Page Cover, Background Mask */
@@ -1845,7 +1852,7 @@ strong, .bold {
 				.section .content .c-columns.content-centered .c-aside .c-wrapper .social-grid {
 					display: inline-block; }
 			.section .content .c-columns.content-centered .title-desc {
-				margin: 0 auto; }
+				margin: 0px auto 200px auto; }
 				.section .content .c-columns.content-centered .title-desc h2,
 				.section .content .c-columns.content-centered .title-desc h3,
 				.section .content .c-columns.content-centered .title-desc h4,
@@ -1855,15 +1862,14 @@ strong, .bold {
 					position: relative;
 					margin-bottom: 4px;
 					padding-bottom: 4px; }
-					/* Home Title Blue Line */
+					/* Home Title Bottom Line */
 					.section .content .c-columns.content-centered .title-desc .border:before {
 						content: "";
 						position: absolute;
-						/*top: -120%*/
 						left: 50%;
 						bottom: 0;
-						width: 400px;
-						margin-left: -200px;
+						width: 1000px;
+						margin-left: -500px;
 						height: 1px;
 						border-top: 1px solid #00AADD; }
 				.section .content .c-columns.content-centered .title-desc .desc {
