@@ -115,8 +115,8 @@ $(document).on('ready', function () {
 	videoBg.maximage('maxcover');
 
 	// 6. Prepare Titles, Content for Animation
-	$('.section .content .anim .title h2, .section .content .anim .title h3, .section .content .anim .desc p, \
-		.section .content .anim .title-desc h2, .section .content .anim .title-desc h3, .section .content .anim .title-desc h4, .section .content .anim .item-desc h3,.section .content .anim .title-desc p, \
+	$('.section .content .anim .title h2, .section .content .anim .title h3, .section .content .anim .title h4, .section .content .anim .title h5, .section .content .anim .desc p, \
+		.section .content .anim .title-desc h2, .section .content .anim .title-desc h3, .section .content .anim .title-desc h4, .section .content .anim .item-desc h5, .section .content .anim .title-desc p, \
 		.cta-btns .btn').wrap("<span class='anim-wrapper'></span>");
 
 	// 7. Init fullPage.js Plugin
@@ -253,19 +253,19 @@ $(document).on('ready', function () {
 	// 9. Page Loader : Hide loader when all are loaded
 	/**
 	 * contextWindow.on('load', function () {
-		$('#pageloader').addClass('p-hidden');
+		$('#page-loader').addClass('p-hidden');
 		$('.section').addClass('anim');
 	});
 
-	var pageLoader = document.querySelector('.pageloader');
+	var page-loader = document.querySelector('.page-loader');
 	var pageFader = setInterval(() => {
 		// if we don't set opacity 1 in CSS, then it will be equaled to ""
 		// that's why we check it, and if so, set opacity to 1
-		if (!pageLoader.style.opacity) {
-			pageLoader.style.opacity = 1;
+		if (!page-loader.style.opacity) {
+			page-loader.style.opacity = 1;
 		}
-		if (pageLoader.style.opacity > 0) {
-			pageLoader.style.opacity -= 0.1;
+		if (page-loader.style.opacity > 0) {
+			page-loader.style.opacity -= 0.1;
 		} else {
 		  clearInterval(pageFader);
 		}
@@ -275,14 +275,13 @@ $(document).on('ready', function () {
 	$( "p" ).fadeOut( "slow" );
 
 	contextWindow.on('load', function () {
-		$( this ).fadeOut( "slow", $('#pageloader').addClass('p-hidden'))
+		$( this ).fadeOut( "slow", $('#page-loader').addClass('p-hidden'))
 		$('.section').addClass('anim');
 	});
 	*/
-
 	contextWindow.on('load', function () {
-		$('#pageloader').fadeOut("slow");
-		$('#pageloader').addClass('p-hidden');
+		$('#page-loader').addClass('p-hidden');
 		$('.section').addClass('anim');
 	});
+
 });
