@@ -8,37 +8,36 @@ html file
 	<div><i class='fa fa-spinner  fa-spin'></i><p>loading</p></div>
 </div>
 -------------*/
-.pageloader {
+.page-loader {
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
 	height: 100%;
 	top:0;
 	left:0;
-	justify-content: center;
-	align-items: center;
 	background: #080808;
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	opacity: 1;
 	transition: opacity 0.3s linear; }
 
-.pageloader .fa {
+.page-loader .fa {
 	font-size: 2.5rem; }
 
-.pageloader .pageloader.visible {
+.page-loader,
+.page-loader.visible {
+	-webkit-transition: 0.6s;
+	-ms-transition: 0.6s;
+	-moz-transition: 0.6s;
+	transition: 0.6s;
 	opacity: 1;
-	visibility: visible;
-		-webkit-transition: 0.6s;
-		-ms-transition: 0.6s;
-		-moz-transition: 0.6s;
-			transition: 0.6s; }
+	visibility: visible; }
 
-.pageloader.p-hidden {
+.page-loader.p-hidden {
 	visibility: hidden;
 	opacity: 0; }
-	.pageloader div {
+	.page-loader div {
 		position: absolute;
 		top:50%;
 		width: 100%;
@@ -46,7 +45,7 @@ html file
 		color: #1D1D1D;
 		margin-top: -50px;
 		display: block; }
-		.pageloader div .icon {
+		.page-loader div .icon {
 			display: inline-block;
 			margin-left: -20px;
 			left: 50%;
@@ -55,11 +54,11 @@ html file
 			content: "";
 			background: #1D1D1D;
 			border-radius: 100px;
-			border: 8px solid #002E77;
+			border: 8px solid #00AADD;
 			border-top-color: rgba(255, 255, 255, 0.58);
 			border-bottom-color: rgba(255, 255, 255, 0.58); }
-		.pageloader div p {
-			margin-top: 100px;
+		.page-loader div p {
+			margin-top: 30px;
 			font-size: 14px;
 			color: #555555;
 			letter-spacing: 1em;

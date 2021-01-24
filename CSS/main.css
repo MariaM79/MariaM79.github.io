@@ -127,6 +127,22 @@ iframe {
 	display:inline-block;
 	margin-left: 12px; }
 
+.spin {
+	animation-name: spin;
+	animation-duration: 3000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; }
+	@keyframes spin {
+		from {
+			transform:rotate(0deg);
+		} to {
+			transform:rotate(360deg); } }
+
+.jumbo-icon {
+	display: inline-block;
+	width: 50px;
+	font-size: 50px; }
+
 .pos-rel {
 	position: relative; }
 
@@ -1390,12 +1406,12 @@ strong, .bold {
 	overflow: hidden; }
 	.page-cover .cover-bg {
 		/* Page Cover, Background Image, Color */
-		background: url(../Images/bg02.jpg);
+		background: url(../Images/bg07.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		opacity: 0.6;
+		opacity: 0.2;
 		z-index: -1; }
 	.page-cover .cover-bg.bg-color {
 		/* Page Cover, Background Mask */
@@ -1837,12 +1853,13 @@ strong, .bold {
 					text-align: center; }
 				.section .content .c-columns.content-centered .title-desc .border {
 					position: relative;
-					margin-bottom: 32px;
-					padding-bottom: 24px; }
+					margin-bottom: 4px;
+					padding-bottom: 4px; }
+					/* Home Title Blue Line */
 					.section .content .c-columns.content-centered .title-desc .border:before {
 						content: "";
 						position: absolute;
-						top:-120%;
+						/*top: -120%*/
 						left: 50%;
 						bottom: 0;
 						width: 400px;
@@ -1884,10 +1901,14 @@ strong, .bold {
 				@media (min-width: 601px) {
 					.section .content .title-desc h2 {
 						font-size: 3rem; } }
-			.section .content .title-desc h1, .section .content .title-desc h2,
-			.section .content .title-desc h3, .section .content .title-desc h4 {
-				margin-bottom: 0.25em; }
-			.section .content .title-desc ul, .section .content .title-desc li {
+			.section .content .title-desc h1,
+			.section .content .title-desc h2,
+			.section .content .title-desc h3,
+			.section .content .title-desc h4 {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em; }
+			.section .content .title-desc ul,
+			.section .content .title-desc li {
 				list-style: circle;
 				list-style-position: inside; }
 			.section .content .title-desc .title h2 {
@@ -1902,7 +1923,8 @@ strong, .bold {
 			max-width: 1200px; }
 			.section .content .item-list li {
 				text-align: center; }
-				.section .content .item-list li h3, .section .content .item-list li p {
+				.section .content .item-list li h3,
+				.section .content .item-list li p {
 					text-align: center; }
 				.section .content .item-list li .illustr {
 					text-align: center; }
@@ -2281,9 +2303,9 @@ strong, .bold {
 		font-size: 20px;
 		letter-spacing: 2px;
 		border: none;
-		position: absolute;
-		top: 10%;
-		left: 25%;
+		position: relative;
+		top: 0%;
+		left: 0%;
 		padding: 0px 32px;
 		transition: 0.3s; }
 		.section-home .content .title-desc .cta-btns .btn-start:hover {
@@ -2353,7 +2375,7 @@ strong, .bold {
 			.section-home .content .home-logo img {
 				height: 240px; } }
 .section-home .content-centered .title {
-	margin-top: 64px; }
+	margin-top: 16px; }
 .section-home .content-centered .desc.border {
 	position: relative;
 	margin-top: 24px;
@@ -2371,6 +2393,8 @@ strong, .bold {
 		border-left: none;
 		border-top: 1px solid #FFFFFF; }
 
+
+/* Title Transformations */
 .main-anim .section-home .anim .anim-wrapper {
 	overflow: hidden;
 	display: block; }
@@ -2378,31 +2402,31 @@ strong, .bold {
 	transition: 0.6s;
 	transition-delay: 0s;
 	position: relative;
-	transform: translateY(-110%);
+	transform: translateY(0%);
 	transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01); }
 .main-anim .section-home .anim h3 {
 	transition: 0.6s;
 	transition-delay: 0s;
 	position: relative;
-	transform: translateY(-430%);
+	transform: translateY(0%);
 	transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01); }
 .main-anim .section-home .anim h4 {
 	transition: 0.6s;
 	transition-delay: 0s;
 	position: relative;
-	transform: translateY(-310%);
+	transform: translateY(0%);
 	transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01); }
 .main-anim .section-home .anim h5 {
 	transition: 0.6s;
 	transition-delay: 0s;
 	position: relative;
-	transform: translateY(-220%);
+	transform: translateY(0%);
 	transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01); }
 .main-anim .section-home .anim p {
 	transition: 0.6s;
 	transition-delay: 0s;
 	position: relative;
-	transform: translateY(-60%);
+	transform: translateY(0%);
 	transition-timing-function: cubic-bezier(0.52, 0.42, 0, 1.01); }
 @media (min-width: 601px) and (min-height: 481px) {
 	.main-anim .section-home .anim .home-logo,
