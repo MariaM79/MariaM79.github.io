@@ -3,39 +3,37 @@
 [Table of Contents]
 /** CSS Reference
 	0. Base Style
-	1. 1. Header, and page menu
-		1.1 Header (logo)/ .header-top
+	1. 1. Header, and Page Menu
+		1.1 Header (Logo) / .header-top
 		1.2 Menu / .menu-links, .menu-icon
-		1.3 Dot/bar Navigation at right / #fp-nav.right (hooking fullpage.js plugin)
-	2. Background cover image / .page-cover
-	3. Main content / .main
-		3.1 Fullscreen sections overall style / .section
-		3.2 Home page section (including the clock) / .section-home
-		3.3 Projects/Products/Gallery/Grid list / .section-projects
-		3.4 Contact page section and forms / .section-contact
-		3.5 Registration form / .section-register
-		3.6 Page item detail / .desc-img
+		1.3 Dot / Bar Navigation at Right / #fp-nav.right (hooking fullpage.js plugin)
+	2. Background Cover Image / .page-cover
+	3. Main Content / .main
+		3.1 Fullscreen Sections Overall Style / .section
+		3.2 Home Page Section (Including the Clock) / .section-home
+		3.3 Projects / Products / Gallery / Grid List / .section-projects
+		3.4 Contact Page Section and Forms / .section-contact
+		3.5 Registration Form / .section-register
+		3.6 Page Item Detail / .desc-img
 	4. Footer / .site-footer
 	5. Responsiveness
-
-	Sample hooks to altering this css file can be found in "style-colorX.css" file
 **/
 /*---------------------------
 [Colors]
-	text color : #FFFFFF, rgba(255, 255, 255, 1)
-	light blue : #CCF7FF, rgba(204, 247, 255, 1)
-	orange : #DDAA00, rgba(221, 170, 0, 1)
-	blue : #00AADD, rgba(0, 170, 221, 1)
-	black : #0D0D0D, rgba(13, 13, 13, 1)
+	Text : #FFFFFF, rgba(255, 255, 255, 1)
+	Light Blue : #CCF7FF, rgba(204, 247, 255, 1)
+	Orange : #DDAA00, rgba(221, 170, 0, 1)
+	Blue : #00AADD, rgba(0, 170, 221, 1)
+	Black : #0D0D0D, rgba(13, 13, 13, 1)
 [Typography]
-	font-family :
-	- "Bebas Neue" / title
-	- "Open Sans" / content
-	- "Montserrat" / alternative style
-	- "Ionicons" / icons
+	Font Families :
+	- "Bebas Neue" / Title
+	- "Open Sans" / Content
+	- "Montserrat" / Alternative Style
+	- "Iconify" / icons
 */
 /* 0. Base Style */
-/* 0.0 Tag/Classes Initailization */
+/* 0.0 Tag / Classes Initailization */
 html {
 	/* HTML tag init */
 	color: #FFFFFF;
@@ -159,6 +157,8 @@ iframe {
 		body {
 			width: 150px;
 			font-size: 150px; } } }
+	.big-serv-icon:hover {
+		color: #DDAA00;}
 
 /* Page Loader Style */
 .page-loader {
